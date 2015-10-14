@@ -42,4 +42,10 @@ public class MemberRegistration {
         em.persist(member);
         memberEventSrc.fire(member);
     }
+    
+    public void unregister(Member member) throws Exception {
+        log.info("Registering " + member.getName());
+        em.remove(member);
+        memberEventSrc.fire(member);
+    }
 }
