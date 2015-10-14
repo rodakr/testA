@@ -43,7 +43,7 @@ public class MemberRegistration {
         memberEventSrc.fire(member);
     }
     
-    public void unregister(Member member) throws Exception {
+    public void deregister(Member member) throws Exception {
         log.info("Registering " + member.getName());
         em.remove(member);
         memberEventSrc.fire(member);
